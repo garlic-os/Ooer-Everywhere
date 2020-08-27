@@ -2,16 +2,19 @@ let enabled = false;
 let injected = false;
 
 let link;
+let cssPath;
 const decorations = [];
 
 
 // Be nice and only put stuff on the page once the icon is clicked
 function injectPayload() {
+    cssPath = chrome.runtime.getURL("ooer.css");
+
     link = document.createElement("link");
     link.id = "ooer-css";
     link.rel = "stylesheet";
     link.type = "text/css";
-    link.href = chrome.runtime.getURL("ooer.css");
+    link.href = cssPath;
     document.head.appendChild(link);
 
     const soupdog = document.createElement("img");
@@ -49,12 +52,11 @@ function enable() {
         injectPayload();
         // The content is enabled by default, so no need to go through
         //   re-enabling just yet
+        enabled = true;
         return;
     }
 
-    const cssPath = link.getAttribute("href-disabled");
     link.href = cssPath;
-    link.removeAttribute("href-disabled");
 
     for (const dec of decorations) {
         dec.style.visibility = "visible";
@@ -70,9 +72,7 @@ function disable() {
         return;
     }
 
-    // Disable the CSS by disabling the path to the link's stylesheet
-    const cssPath = link.href;
-    link.setAttribute("href-disabled", cssPath);
+    // Disable the CSS by removing the path to the link's stylesheet
     link.removeAttribute("href");
 
     for (const dec of decorations) {
