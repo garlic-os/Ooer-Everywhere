@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Ooer CSS",
+    "description": "Bless every page with the sleek, modern look of Reddit's /r/Ooer.",
+    "version": "36",
+    "author": "garlicOS®",
+    "permissions": ["activeTab"],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }],
+    "web_accessible_resources": [
+        "ooer.css",
+        "img/*"
+    ],
+    "browser_action": {
+        "default_icon": "icon/icon48.png"
+    },
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "16": "icon/icon16.png",
+        "32": "icon/icon32.png",
+        "48": "icon/icon48.png",
+        "64": "icon/icon64.png",
+        "128": "icon/icon128.png",
+        "256": "icon/icon256.png",
+        "512": "icon/icon512.png",
+        "1024": "icon/icon1024.png"
+    }
+}

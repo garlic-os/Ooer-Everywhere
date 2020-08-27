@@ -1,0 +1,180 @@
+* {
+    cursor: url("img/sock.png"), auto
+}
+
+body {
+    background: #FFB057 url("img/bbc.png");
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", "Coming Soon";
+    font-size: 25px !important;
+    text-transform: uppercase
+}
+
+p {
+    border: 20px solid red;
+    background: yellow;
+    font-family: "Courier New", monospace !important;
+    font-size: 25px
+}
+
+.side, aside, .sidebar {
+    background-color: blue
+}
+
+.side p, aside p, .sidebar p {
+    font-family: "Arial", sans-serif !important
+}
+
+a:hover {
+    font-size: 350px;
+    color: green
+}
+
+.number, [type="number"] {
+    color: purple;
+    font-weight: bold
+}
+
+.number::before, [type="number"]::before {
+    content: "pots and pans"
+}
+
+.number::after, [type="number"]::after {
+    content: "hammocks are love"
+}
+
+h1 {
+    color: green !important;
+    text-align: center
+}
+
+#header, .header, header {
+    background-color: #FF00FF
+}
+
+h1, h2, h3, h4, h5, h6, header, .header, #header {
+    content: url("img/jimp.png")
+}
+
+.arrow, #arrow {
+    background-image: url("img/b.png") !important;
+    background-position: initial !important;
+    background-size: contain
+}
+
+.arrow.down {
+    transform: rotate(180deg);
+    background-position: right !important
+}
+
+.footer, footer, #footer {
+    clear: both;
+    height: 800px;
+    width: 100%;
+    padding: 0;
+    text-align: center
+}
+
+.footer::after, footer::after, #footer::after {
+    content: "Ã¢â„¢Â¥Ã¢â„¢Â¥Ã¢â„¢Â¥ liek dis cry evertim ";
+    background: white;
+    font-size: 120px
+}
+
+.content {
+    margin-top: 50px
+}
+
+form {
+    position: static
+}
+
+.side h3:nth-of-type(1) {
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    display: block;
+    width: 50%;
+    padding: 7px 0px 7px 40px;
+    border-radius: 8px;
+    margin: 15px;
+    background: #119911;
+    color: #555555;
+    text-align: left
+}
+
+.author+*::before {
+    content: "Anonymous ";
+    color: #369
+}
+
+.comment::before {
+    font-weight: bold
+}
+
+.author {
+    content: " ## Mod ##";
+    color: #900
+}
+
+p::after, a::after {
+    content: "oh man i am not good with computer plz to help"
+}
+
+#header-img {
+    animation: ooer-header-img 5s linear infinite
+}
+
+button, [type="button"], .button {
+    background-image: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    animation: ooer-rainbow 18s linear infinite
+}
+
+nav > * {
+    display: inline
+}
+
+.ooer-raptor {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99
+}
+
+.ooer-soupdog {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    animation: ooer-garlicspin 4s linear infinite
+}
+
+.ooer-deadpixel {
+    position: fixed;
+    top: 352px;
+    left: 550px;
+    width: 1px;
+    height: 1px;
+    background-color: rgb(255, 0, 245);
+    margin: 0px;
+    pointer-events: none;
+    z-index: 99
+}
+
+@keyframes ooer-garlicspin {
+    100% { transform: rotate(360deg) }
+}
+
+@keyframes ooer-header-img {
+    0%   { background: red    }
+    25%  { background: yellow }
+    50%  { background: blue   }
+    75%  { background: green  }
+    100% { background: red    }
+}
+
+@keyframes ooer-rainbow {
+    0%   { background-position: 0% 82%   }
+    50%  { background-position: 100% 19% }
+    100% { background-position: 0% 82%   }
+}
