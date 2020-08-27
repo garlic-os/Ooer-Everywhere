@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Ooer CSS",
     "description": "Bless every page on the Internet with the sleek, modern look of Reddit's /r/Ooer.",
-    "version": "36",
+    "version": "1.1.36",
     "author": "garlicOS®",
     "permissions": ["activeTab"],
     "content_scripts": [{
